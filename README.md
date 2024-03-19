@@ -14,3 +14,5 @@ recursive call considers.
 Analyse the time complexity of your implementation and give a $\Theta$ bound for
 its worst-case runtime. Add your answer, including your reasoning, to this
 markdown file.
+
+The worst case runtime for this implementation is O(n^2), in best and average cases, this implementation runs at a O(n log n) complexity.
