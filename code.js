@@ -1,18 +1,26 @@
-function quicksort(array){
-    if (array.length < 2){
-        return array
+function quicksort(array) {
+    let stack = [{ left: 0, right: array.length - 1 }];
+    while (stack.length > 0) {
+        let { left, right } = stack.pop();
+        if (left >= right) continue;
+        let pivot = array[right];
+        let partitionIndex = partition(array, left, right, pivot);
+        stack.push({ left, right: partitionIndex - 1 });
+        stack.push({ left: partitionIndex + 1, right });
     }
+    return array;
+}
 
-    let pivot = array[array.length - 1];
-    let leftArr = [];
-    let rightArr = [];
-
-    for (let i = 0; i < array.length - 1; i++){
-        if (array[i] < pivot){
-            leftArr.push(array[i]);
-        } else{
-            rightArr.push(array[i]);
+function partition(array, left, right, pivot) {
+    let partitionIndex = left;
+    for (let i = left; i < right; i++) {
+        if (array[i] < pivot) {
+            [array[i], array[partitionIndex]] = [array[partitionIndex], array[i]];
+            partitionIndex++;
         }
     }
-    return [...quicksort(leftArr), pivot, ...quicksort(rightArr)];
+    [array[right], array[partitionIndex]] = [array[partitionIndex], array[right]];
+    return partitionIndex;
 }
+
+console.log(quicksort([3,5,2,8,9,3,5]))
