@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "fs": "^0.0.1-security",
-    "jsverify": "^0.8.4",
-    "node-fetch": "^3.3.2"
-  }
-}
