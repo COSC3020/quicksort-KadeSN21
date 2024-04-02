@@ -22,5 +22,3 @@ function partition(array, left, right, pivot) {
     [array[right], array[partitionIndex]] = [array[partitionIndex], array[right]];
     return partitionIndex;
 }
-
-console.log(quicksort([3,5,2,8,9,3,5]))
