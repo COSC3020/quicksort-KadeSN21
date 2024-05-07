@@ -16,3 +16,5 @@ its worst-case runtime. Add your answer, including your reasoning, to this
 markdown file.
 
 The worst case runtime for this implementation is O(n^2), in best and average cases, this implementation runs at a O(n log n) complexity.
+
+Help: ChatGPT and Stackoverflow.com
