@@ -17,4 +17,9 @@ markdown file.
 
 The worst case runtime for this implementation is O(n^2), in best and average cases, this implementation runs at a O(n log n) complexity.
 
-Help: ChatGPT and Stackoverflow.com
+Help: Stackoverflow.com helped me visualize further what quicksort is doing so I could then implement a non recursive version of the algorithm. 
+
+“I certify that I have listed all sources used to complete this exercise, including the use
+of any Large Language Models. All of the work is my own, except where stated
+otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is
+suspected, charges may be filed against me without prior notice.”
